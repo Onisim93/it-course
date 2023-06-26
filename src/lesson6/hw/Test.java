@@ -5,17 +5,19 @@ public class Test {
         Contact[] contacts = new Contact[10];
         contacts[0] = new Contact("Onisim", "Albarov", "89277099770");
         contacts[1] = new Contact("Sergey", "Albarov", "89277700997");
+        contacts[2] = new Contact("Anna", "Albarova", "89277122331");
+        contacts[3] = new Contact("Sergey", "Vakhitov", "89277700331");
+        contacts[4] = new Contact("Sergey", "Voronkov", "89277700333");
+        contacts[5] = new Contact("Roman", "Sidorov", "89277700442");
+        contacts[6] = new Contact("Rustam", "Sadykov", "89277700330");
+
+        Phonebook phonebook = new Phonebook(contacts);
+
+        System.out.println(phonebook.getByName("Sergey"));
+        System.out.println(phonebook.getBySurname("Vakhitov"));
+        System.out.println(phonebook.getByPhoneNumber("89277700442"));
 
 
-    }
 
-    public static void getContactByName(String name, Contact[] contacts) {
-        for (int i=0;i<contacts.length; i++) {
-            if (contacts[i].getName().equals(name)) {
-                System.out.println(contacts[i].getName());
-                System.out.println(contacts[i].getSurname());
-                System.out.println(contacts[i].getPhone());
-            }
-        }
     }
 }
